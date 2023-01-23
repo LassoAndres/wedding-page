@@ -1,0 +1,30 @@
+{
+  "name": "wedding-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "node app.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node app.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1",
+    "bootstrap-icons": "1.10.1",
+    "connection-string": "^4.3.5",
+    "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.3",
+    "http-constants": "^2.1.0-19-gdd89f31",
+    "next": "12.1.2",
+    "pg-promise": "^10.11.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "uuid": "^8.3.2"
+  }
+}
