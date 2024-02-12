@@ -28,18 +28,18 @@ function buildTemplate(guest) {
 
 async function sendInvitation(guest) {
     let response = await mailerTransport.sendMail({
-        from: '"Andrés Lasso" <' + emailFrom + '>',
+        from: '"Sender name" <' + emailFrom + '>',
         to: `"${guest.full_name}" <${guest.email}>`,
-        subject: "Invitación al casamiento de Juli y Andy",
+        subject: "Wedding invitation - XX & ZZ",
         html: buildTemplate(guest)
     })
     if (response.accepted.length !== 0) {
-        console.log(`Correo enviado: ${response.accepted.join(",")}`)
+        console.log(`Email sent: ${response.accepted.join(",")}`)
     } else {
-        console.log(`Correo NO enviado: ${guest.email}`)
+        console.log(`Email not sent: ${guest.email}`)
     }
     if (response.rejected.length !== 0) {
-        console.log(`Correo NO enviado: ${response.rejected.join(",")}`)
+        console.log(`Email not sent: ${response.rejected.join(",")}`)
     }
 }
 
